@@ -24,10 +24,10 @@ Clone the Phonepe Pulse Github repository using the following command:
 !git clone https://github.com/phonepe/pulse.git
 ```
 # PhonePe Pulse Dashboard
-In this dashboard we are using the data that we extrascted from the state-wise json files in the repository which are uploaded into MySQL database. Then using the data dowmloded from SQL database the geo visualization is created.
+In this dashboard we are using the data that we extracted from the state-wise json files in the repository which are uploaded into MySQL database. Then using the data downloded from SQL database the geo visualization is created.
 
-# Importting Libraries
-Before proceedind further importing the necessary libraries in important. In this dash board we use streamlit, plotly to visualize our data.
+# Importing Libraries
+Before proceeding further importing the necessary libraries in important. In this dash board we use streamlit, plotly to visualize our data.
 
 ```
 import pandas as pd
@@ -40,6 +40,19 @@ import plotly.express as px
 ```
 # Connecting to Database
 Next we coonect to the database were we stored our six dataframes which are transformed in a way to best suit for the visualization.
+
+```
+# Connect to the MySQL server
+cnx = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Gowsika1998*",
+    auth_plugin='mysql_native_password'
+)
+```
+Create a cursor object to execute SQL commands
+cursor = cnx.cursor()
+
 
 # Streamlit Programe
 In here use your own imagination and create your dashboard using stremlit, If you look at my dashbord function block it has various charts and dataframe displayed using plotly graph. likewise you could also try to visualize in more beeter and efficient way.
